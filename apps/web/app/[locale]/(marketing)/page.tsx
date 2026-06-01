@@ -67,7 +67,7 @@ function Home() {
   return (
     <div className={'flex flex-col'}>
       {/* 1. Hero — typographic, left aligned, no background photo. */}
-      <section className={'py-16 md:py-20'}>
+      <section className={'py-10 md:py-12'}>
         <div className={SHELL}>
           <span
             className={
@@ -101,7 +101,7 @@ function Home() {
       </section>
 
       {/* 2. The ventures — three cards, neutral image placeholder on top. */}
-      <section className={'py-16 md:py-20'}>
+      <section className={'py-10 md:py-12'}>
         <div className={SHELL}>
           <div className={'grid gap-8 md:grid-cols-3'}>
             {VENTURES.map((v) => (
@@ -164,7 +164,7 @@ function Home() {
       </section>
 
       {/* 3. Thesis — short, left aligned, generous spacing. */}
-      <section className={'py-16 md:py-20'}>
+      <section className={'py-10 md:py-12'}>
         <div className={SHELL}>
           <h2
             className={
@@ -192,7 +192,7 @@ function Home() {
       </section>
 
       {/* 4. Why Paraguay — numbered editorial list, 01–04. */}
-      <section className={'py-16 md:py-20'}>
+      <section className={'py-10 md:py-12'}>
         <div className={SHELL}>
           <h2
             className={
@@ -244,7 +244,7 @@ function Home() {
       </section>
 
       {/* 5. Closing — one strong statement + styled button. */}
-      <section className={'py-16 md:py-20'}>
+      <section className={'py-10 md:py-12'}>
         <div className={SHELL}>
           <h2
             className={
