@@ -56,21 +56,21 @@ const VENTURES = [
     body: 'A second residency in Paraguay, secured end to end, with one short trip required.',
     href: RESIDENCY_URL,
     image: '/images/ventures/residency.jpg',
-    alt: 'A Paraguayan permanent residency document beside a passport on a wooden desk',
+    alt: 'A deep red Paraguayan passport on a wooden desk beside an official document',
   },
   {
     name: 'Itaju Capital',
     status: 'Coming Soon' as const,
     body: 'For investors putting capital into Paraguay. We research the opportunities, handle acquisition, and manage what you own, so you can be invested here without being here.',
     image: '/images/ventures/capital.jpg',
-    alt: 'A stack of gleaming gold bars against a dark background',
+    alt: 'A stack of gold bars on a dark surface',
   },
   {
     name: 'Itaju Energy',
     status: 'Coming Soon' as const,
     body: "Turning Paraguay's hydro surplus into infrastructure: AI data centers & Bitcoin mining farms, running on clean, cost efficient renewable energy.",
     image: '/images/ventures/energy.jpg',
-    alt: 'Water rushing through the spillways of a hydroelectric dam',
+    alt: 'Turquoise water surging through a concrete hydroelectric spillway',
   },
 ];
 
