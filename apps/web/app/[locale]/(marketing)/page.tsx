@@ -67,7 +67,7 @@ function Home() {
   return (
     <div className={'flex flex-col'}>
       {/* 1. Hero — typographic, left aligned, no background photo. */}
-      <section className={'pt-16 pb-20 md:pt-24 md:pb-28'}>
+      <section className={'py-16 md:py-20'}>
         <div className={SHELL}>
           <span
             className={
@@ -79,7 +79,7 @@ function Home() {
 
           <h1
             className={
-              'font-display mt-8 max-w-5xl text-[2.75rem] leading-[1.04] font-medium tracking-tight text-balance sm:text-6xl lg:text-7xl'
+              'font-display mt-6 max-w-5xl text-[2.75rem] leading-[1.04] font-medium tracking-tight text-balance sm:text-6xl lg:text-7xl'
             }
           >
             Paraguay is one of the fastest growing economies in South America.{' '}
@@ -88,7 +88,7 @@ function Home() {
 
           <p
             className={
-              'text-muted-foreground mt-8 max-w-2xl text-lg leading-relaxed md:text-xl'
+              'text-muted-foreground mt-6 max-w-2xl text-lg leading-relaxed md:text-xl'
             }
           >
             Itaju Group builds and operates ventures in Paraguay, a territorial
@@ -97,48 +97,13 @@ function Home() {
             just crossed into investment grade. We&apos;re not chasing a
             turnaround. We&apos;re building where the growth already is.
           </p>
-
-          <div className={'mt-10 flex flex-wrap items-center gap-3'}>
-            <Link
-              href={RESIDENCY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={
-                'hover:border-gold hover:text-gold rounded-full border px-4 py-1.5 text-sm font-medium transition-colors'
-              }
-            >
-              Residency
-            </Link>
-            <span
-              className={
-                'text-muted-foreground rounded-full border px-4 py-1.5 text-sm font-medium'
-              }
-            >
-              Capital
-            </span>
-            <span
-              className={
-                'text-muted-foreground rounded-full border px-4 py-1.5 text-sm font-medium'
-              }
-            >
-              Energy
-            </span>
-          </div>
         </div>
       </section>
 
       {/* 2. The ventures — three cards, neutral image placeholder on top. */}
-      <section className={'py-20 md:py-28'}>
+      <section className={'py-16 md:py-20'}>
         <div className={SHELL}>
-          <h2
-            className={
-              'font-display max-w-2xl text-4xl font-medium tracking-tight md:text-5xl'
-            }
-          >
-            What we&apos;re building
-          </h2>
-
-          <div className={'mt-12 grid gap-8 md:grid-cols-3'}>
+          <div className={'grid gap-8 md:grid-cols-3'}>
             {VENTURES.map((v) => (
               <div key={v.name} className={'flex flex-col'}>
                 {/* Neutral placeholder; real photography lands in a later pass. */}
@@ -227,7 +192,7 @@ function Home() {
       </section>
 
       {/* 4. Why Paraguay — numbered editorial list, 01–04. */}
-      <section className={'py-20 md:py-28'}>
+      <section className={'py-16 md:py-20'}>
         <div className={SHELL}>
           <h2
             className={
@@ -241,7 +206,7 @@ function Home() {
             showing up.
           </p>
 
-          <div className={'mt-14 flex flex-col'}>
+          <div className={'mt-6 flex flex-col'}>
             {WHY_PARAGUAY.map((item, i) => (
               <div
                 key={item.title}
@@ -279,7 +244,7 @@ function Home() {
       </section>
 
       {/* 5. Closing — one strong statement + styled button. */}
-      <section className={'py-24 md:py-32'}>
+      <section className={'py-16 md:py-20'}>
         <div className={SHELL}>
           <h2
             className={
