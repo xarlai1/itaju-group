@@ -1,11 +1,8 @@
-import Link from 'next/link';
-
 import { getTranslations } from 'next-intl/server';
 
 import { SitePageHeader } from '~/(marketing)/_components/site-page-header';
 
 const LAST_UPDATED = 'May 22, 2026';
-const CONTACT_EMAIL = 'hello@itajuresidency.com';
 
 export async function generateMetadata() {
   const t = await getTranslations('marketing');
@@ -26,7 +23,7 @@ const sections: Section[] = [
     blocks: [
       {
         kind: 'p',
-        text: 'These Terms and Conditions (the "Terms") govern your access to and use of the website operated by Itaju Residency E.A.S (the "Company", "we", "us", or "our"), and any services we provide through it. By using our website or engaging our services, you agree to be bound by these Terms.',
+        text: 'These Terms and Conditions (the "Terms") govern your access to and use of the website operated by Itaju Group E.A.S (the "Company", "we", "us", or "our"), and any services we provide through it. By using our website or engaging our services, you agree to be bound by these Terms.',
       },
       {
         kind: 'p',
@@ -275,7 +272,7 @@ const sections: Section[] = [
     blocks: [
       {
         kind: 'p',
-        text: 'If you are unhappy with our service, we want to know. Please contact us first at hello@itajuresidency.com with a clear description of your concern, and we will respond in writing within a reasonable time.',
+        text: 'If you are unhappy with our service, we want to know. Please contact us first with a clear description of your concern, and we will respond in writing within a reasonable time.',
       },
     ],
   },
@@ -324,23 +321,6 @@ async function TermsOfServicePage() {
               })}
             </section>
           ))}
-
-          <section className="space-y-3">
-            <h2 className="font-heading text-secondary-foreground text-xl font-semibold tracking-tight xl:text-2xl">
-              17. Contact
-            </h2>
-            <p className="text-muted-foreground text-base leading-relaxed">
-              For any question about these Terms, please contact us at:
-            </p>
-            <p className="text-muted-foreground text-base leading-relaxed">
-              <Link
-                href={`mailto:${CONTACT_EMAIL}`}
-                className="hover:text-foreground underline"
-              >
-                {CONTACT_EMAIL}
-              </Link>
-            </p>
-          </section>
         </article>
       </div>
     </div>

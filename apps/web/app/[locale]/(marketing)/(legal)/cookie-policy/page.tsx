@@ -1,11 +1,8 @@
-import Link from 'next/link';
-
 import { getTranslations } from 'next-intl/server';
 
 import { SitePageHeader } from '~/(marketing)/_components/site-page-header';
 
 const LAST_UPDATED = 'May 22, 2026';
-const CONTACT_EMAIL = 'hello@itajuresidency.com';
 
 export async function generateMetadata() {
   const t = await getTranslations('marketing');
@@ -29,7 +26,7 @@ const sections: Section[] = [
     blocks: [
       {
         kind: 'p',
-        text: 'This Cookie Policy explains how Itaju Residency E.A.S. (the "Company", "we", "us", or "our") uses cookies and similar tracking technologies on our website. It tells you what cookies are, which ones we use, why we use them, and how you can manage your preferences.',
+        text: 'This Cookie Policy explains how Itaju Group E.A.S. (the "Company", "we", "us", or "our") uses cookies and similar tracking technologies on our website. It tells you what cookies are, which ones we use, why we use them, and how you can manage your preferences.',
       },
       {
         kind: 'p',
@@ -213,24 +210,6 @@ async function CookiePolicyPage() {
               })}
             </section>
           ))}
-
-          <section className="space-y-3">
-            <h2 className="font-heading text-secondary-foreground text-xl font-semibold tracking-tight xl:text-2xl">
-              9. Contact
-            </h2>
-            <p className="text-muted-foreground text-base leading-relaxed">
-              For any question about this Cookie Policy, or about how we use
-              cookies on our website, please contact us at:
-            </p>
-            <p className="text-muted-foreground text-base leading-relaxed">
-              <Link
-                href={`mailto:${CONTACT_EMAIL}`}
-                className="hover:text-foreground underline"
-              >
-                {CONTACT_EMAIL}
-              </Link>
-            </p>
-          </section>
         </article>
       </div>
     </div>

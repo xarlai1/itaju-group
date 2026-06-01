@@ -1,11 +1,8 @@
-import Link from 'next/link';
-
 import { getTranslations } from 'next-intl/server';
 
 import { SitePageHeader } from '~/(marketing)/_components/site-page-header';
 
 const LAST_UPDATED = 'May 22, 2026';
-const CONTACT_EMAIL = 'hello@itajuresidency.com';
 
 export async function generateMetadata() {
   const t = await getTranslations('marketing');
@@ -26,7 +23,7 @@ const sections: Section[] = [
     blocks: [
       {
         kind: 'p',
-        text: 'This Privacy Policy explains how Itaju E.A.S. (the "Company", "we", "us", or "our") collects, uses, stores, and protects your personal information when you visit our website or engage our residency services.',
+        text: 'This Privacy Policy explains how Itaju Group E.A.S. (the "Company", "we", "us", or "our") collects, uses, stores, and protects your personal information when you visit our website or engage our residency services.',
       },
       {
         kind: 'p',
@@ -45,11 +42,7 @@ const sections: Section[] = [
         kind: 'p',
         text: 'The data controller for your personal information is:',
       },
-      { kind: 'p', text: 'Itaju Residency E.A.S.' },
-      {
-        kind: 'p',
-        text: 'For any question about this policy or about how we handle your data, please contact us at the email above.',
-      },
+      { kind: 'p', text: 'Itaju Group E.A.S.' },
     ],
   },
   {
@@ -209,7 +202,7 @@ const sections: Section[] = [
       },
       {
         kind: 'p',
-        text: 'To exercise any of these rights, please contact us at hello@itajuresidency.com. We will respond within a reasonable time, in line with applicable law.',
+        text: 'To exercise any of these rights, please contact us. We will respond within a reasonable time, in line with applicable law.',
       },
     ],
   },
@@ -294,24 +287,6 @@ async function PrivacyPolicyPage() {
               })}
             </section>
           ))}
-
-          <section className="space-y-3">
-            <h2 className="font-heading text-secondary-foreground text-xl font-semibold tracking-tight xl:text-2xl">
-              15. Contact
-            </h2>
-            <p className="text-muted-foreground text-base leading-relaxed">
-              For any question about this Privacy Policy, or to exercise any of
-              your rights, please contact us at:
-            </p>
-            <p className="text-muted-foreground text-base leading-relaxed">
-              <Link
-                href={`mailto:${CONTACT_EMAIL}`}
-                className="hover:text-foreground underline"
-              >
-                {CONTACT_EMAIL}
-              </Link>
-            </p>
-          </section>
         </article>
       </div>
     </div>
