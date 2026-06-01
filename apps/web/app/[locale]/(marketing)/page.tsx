@@ -3,8 +3,6 @@ import Link from 'next/link';
 
 import { ArrowRight, Landmark, Plane, TrendingUp, Zap } from 'lucide-react';
 
-import { EcosystemShowcase } from '@kit/ui/marketing';
-
 const RESIDENCY_URL = 'https://itajuresidency.com';
 
 // Home page title + description per the Itaju Group brief. openGraph/twitter
@@ -169,36 +167,31 @@ function Home() {
         </div>
       </section>
 
-      {/* 3. Thesis — EcosystemShowcase two column: heading + paragraph beside a
-          gold pull quote. */}
+      {/* 3. Thesis — single full width text block: heading then paragraph. */}
       <section className={'py-10 md:py-12'}>
         <div className={SHELL}>
-          <EcosystemShowcase
-            heading={
-              <span
-                className={
-                  'font-display text-3xl font-medium tracking-tight md:text-4xl'
-                }
-              >
-                {`We're building a base, not placing a bet.`}
-              </span>
-            }
-            description={
-              'Most people meet Paraguay as a line item, a cheaper tax bill, a second status, a place to park. We see it differently. Paraguay is a small country doing the hard things right: a stable currency, low debt, open to capital, and sitting on an energy surplus most nations would build an entire economy around. The opportunity here is not hidden. It is early, and it is compounding. Itaju Group exists to build inside that growth, to put down real roots across the things that matter when you move your life or your capital somewhere new. Where to live. How to operate. What to build. We start with three.'
+          <h2
+            className={
+              'font-display max-w-3xl text-3xl font-medium tracking-tight md:text-4xl'
             }
           >
-            <blockquote
-              className={'flex w-full items-center lg:border-l lg:pl-12'}
-            >
-              <p
-                className={
-                  'text-gold font-display text-3xl leading-tight font-medium tracking-tight text-balance md:text-4xl lg:text-5xl'
-                }
-              >
-                It is early, and it is compounding.
-              </p>
-            </blockquote>
-          </EcosystemShowcase>
+            We&apos;re building a base, not placing a bet.
+          </h2>
+          <p
+            className={
+              'text-muted-foreground mt-6 max-w-3xl text-lg leading-relaxed'
+            }
+          >
+            Most people meet Paraguay as a line item, a cheaper tax bill, a
+            second status, a place to park. We see it differently. Paraguay is a
+            small country doing the hard things right: a stable currency, low
+            debt, open to capital, and sitting on an energy surplus most nations
+            would build an entire economy around. The opportunity here is not
+            hidden. It is early, and it is compounding. Itaju Group exists to
+            build inside that growth, to put down real roots across the things
+            that matter when you move your life or your capital somewhere new.
+            Where to live. How to operate. What to build. We start with three.
+          </p>
         </div>
       </section>
 
@@ -217,6 +210,10 @@ function Home() {
             showing up.
           </p>
 
+          {/* Each card is a row-axis subgrid spanning 3 tracks (icon, title,
+              body). Sharing the parent's row tracks makes the title track the
+              same height across a row, so the body paragraphs start at the same
+              vertical position even when titles wrap to different line counts. */}
           <div className={'mt-6 grid gap-6 sm:grid-cols-2'}>
             {WHY_PARAGUAY.map((item) => {
               const Icon = item.icon;
@@ -225,24 +222,24 @@ function Home() {
                 <div
                   key={item.title}
                   className={
-                    'flex h-full flex-col rounded-lg border border-neutral-200 p-6 md:p-8 dark:border-neutral-800'
+                    'row-span-3 grid grid-rows-subgrid content-start gap-y-3 rounded-lg border border-neutral-200 p-6 md:p-8 dark:border-neutral-800'
                   }
                 >
                   <Icon
-                    className={'text-gold h-7 w-7'}
+                    className={'text-gold h-7 w-7 self-start'}
                     strokeWidth={1.5}
                     aria-hidden
                   />
                   <h3
                     className={
-                      'font-display mt-4 text-2xl font-medium tracking-tight md:text-3xl'
+                      'font-display self-start text-2xl font-medium tracking-tight md:text-3xl'
                     }
                   >
                     {item.title}
                   </h3>
                   <p
                     className={
-                      'text-muted-foreground mt-3 text-base leading-relaxed md:text-lg'
+                      'text-muted-foreground self-start text-base leading-relaxed md:text-lg'
                     }
                   >
                     {item.body}
@@ -254,8 +251,12 @@ function Home() {
         </div>
       </section>
 
-      {/* 5. Closing — one strong statement + styled button. */}
-      <section className={'py-10 md:py-12'}>
+      {/* 5. Closing — one strong statement + styled button. Extra bottom
+          padding: the footer has its own background, so its top edge is the
+          visual boundary. Doubling the bottom padding makes the button → footer
+          gap match the standard section-to-section rhythm (two sections' worth
+          of py-10 md:py-12). */}
+      <section className={'pt-10 pb-20 md:pt-12 md:pb-24'}>
         <div className={SHELL}>
           <h2
             className={
