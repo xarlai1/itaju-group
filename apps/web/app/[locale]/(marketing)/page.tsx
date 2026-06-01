@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { ArrowRight, Landmark, Plane, TrendingUp, Zap } from 'lucide-react';
@@ -54,16 +55,22 @@ const VENTURES = [
     status: 'Live' as const,
     body: 'A second residency in Paraguay, secured end to end, with one short trip required.',
     href: RESIDENCY_URL,
+    image: '/images/ventures/residency.jpg',
+    alt: 'A Paraguayan permanent residency document beside a passport on a wooden desk',
   },
   {
     name: 'Itaju Capital',
     status: 'Coming Soon' as const,
     body: 'For investors putting capital into Paraguay. We research the opportunities, handle acquisition, and manage what you own, so you can be invested here without being here.',
+    image: '/images/ventures/capital.jpg',
+    alt: 'A stack of gleaming gold bars against a dark background',
   },
   {
     name: 'Itaju Energy',
     status: 'Coming Soon' as const,
     body: "Turning Paraguay's hydro surplus into infrastructure: AI data centers & Bitcoin mining farms, running on clean, cost efficient renewable energy.",
+    image: '/images/ventures/energy.jpg',
+    alt: 'Water rushing through the spillways of a hydroelectric dam',
   },
 ];
 
@@ -110,12 +117,23 @@ function Home() {
           <div className={'grid gap-8 md:grid-cols-3'}>
             {VENTURES.map((v) => (
               <div key={v.name} className={'flex flex-col'}>
-                {/* Neutral placeholder; real photography lands in a later pass. */}
+                {/* Venture photography. Same aspect/size as the prior
+                    placeholder (aspect-[4/3] w-full rounded-lg) so the layout
+                    holds; fill + object-cover crops cleanly, overflow-hidden
+                    keeps the rounded corners. */}
                 <div
                   className={
-                    'aspect-[4/3] w-full rounded-lg border border-neutral-200 bg-gradient-to-br from-neutral-100 to-neutral-200 dark:border-neutral-800 dark:from-neutral-800 dark:to-neutral-900'
+                    'relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800'
                   }
-                />
+                >
+                  <Image
+                    src={v.image}
+                    alt={v.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className={'object-cover'}
+                  />
+                </div>
 
                 <div className={'mt-5 flex items-center gap-3'}>
                   <h3 className={'font-display text-2xl font-medium'}>
