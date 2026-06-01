@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "makerkit": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["packages/mcp-server/build/index.cjs"]
+    },
+    "supabase": {
+      "type": "http",
+      "url": "https://mcp.supabase.com/mcp?project_ref=tngtoplblduigogoalpm"
+    }
+  }
+}

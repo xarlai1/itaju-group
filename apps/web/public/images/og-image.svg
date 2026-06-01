@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;family=Inter:wght@400&amp;display=swap');
+      .brand { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-weight: 500; font-size: 140px; letter-spacing: -0.02em; fill: #fafafa; text-anchor: middle; }
+      .sub { font-family: 'Inter', 'Helvetica Neue', sans-serif; font-weight: 400; font-size: 24px; letter-spacing: 0.36em; fill: #fafafa; text-transform: uppercase; opacity: 0.85; text-anchor: middle; }
+      .tag { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-weight: 500; font-style: italic; font-size: 38px; letter-spacing: -0.01em; fill: #fafafa; opacity: 0.85; text-anchor: middle; }
+      .rule { stroke: #fafafa; stroke-width: 1; opacity: 0.3; }
+    </style>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#1a1612"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="270" class="brand">Itaju</text>
+  <text x="600" y="320" class="sub">Group</text>
+  <line x1="500" y1="380" x2="700" y2="380" class="rule"/>
+  <text x="600" y="470" class="tag">One country, three doors.</text>
+</svg>

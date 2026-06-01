@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 140" width="600" height="140">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;family=Inter:wght@400&amp;display=swap');
+      .brand { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-weight: 500; font-size: 96px; letter-spacing: -0.02em; fill: #0a0a0a; }
+      .sub { font-family: 'Inter', 'Helvetica Neue', sans-serif; font-weight: 400; font-size: 22px; letter-spacing: 0.36em; fill: #0a0a0a; text-transform: uppercase; }
+      .rule { stroke: #0a0a0a; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <text x="0" y="100" class="brand">Itaju</text>
+  <line x1="225" y1="50" x2="225" y2="100" class="rule"/>
+  <text x="260" y="83" class="sub">Group</text>
+</svg>

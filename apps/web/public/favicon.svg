@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;display=swap');
+      .mark { font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-weight: 500; font-size: 280px; letter-spacing: -0.02em; fill: #fafafa; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#0a0a0a"/>
+  <text x="256" y="355" class="mark">I</text>
+</svg>

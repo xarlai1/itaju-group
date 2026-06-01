@@ -1,0 +1,4 @@
+question: 'What payment methods do you accept?'
+answer: 'We accept USD, USDT, USDC, BTC, and bank transfers.'
+category: 'Getting Started'
+order: 23
