@@ -1,4 +1,7 @@
-import { Inter as SansFont } from 'next/font/google';
+import {
+  Cormorant_Garamond as DisplayFont,
+  Inter as SansFont,
+} from 'next/font/google';
 
 import { cn } from '@kit/ui/utils';
 
@@ -16,9 +19,21 @@ const sans = SansFont({
   weight: ['300', '400', '500', '600', '700'],
 });
 
-// Cormorant Garamond is only used inside the brand SVGs (logo, favicon,
-// og-image) where it ships via the SVG's own @import. There's no body
-// copy use, so we don't load it through next/font here.
+/**
+ * @display
+ * @description Cormorant Garamond, the brand display serif (matches the
+ * logo/OG wordmark). Exposed as the `--font-cormorant` variable and wired to
+ * the `font-display` utility in shadcn-ui.css. Used for editorial headings;
+ * the default heading font stays Inter so the rest of the app is unchanged.
+ */
+const display = DisplayFont({
+  subsets: ['latin'],
+  variable: '--font-cormorant',
+  fallback: ['Times New Roman', 'serif'],
+  preload: true,
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+});
 
 /**
  * @heading
@@ -27,7 +42,7 @@ const sans = SansFont({
 const heading = sans;
 
 // we export these fonts into the root layout
-export { sans, heading };
+export { sans, heading, display };
 
 /**
  * @name getFontsClassName
@@ -38,7 +53,9 @@ export function getFontsClassName(theme?: string) {
   const dark = theme === 'dark';
   const light = !dark;
 
-  const font = [sans.variable, heading.variable].reduce<string[]>(
+  const font = [sans.variable, heading.variable, display.variable].reduce<
+    string[]
+  >(
     (acc, curr) => {
       if (acc.includes(curr)) return acc;
 
