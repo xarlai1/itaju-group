@@ -44,13 +44,6 @@ const WHY_PARAGUAY = [
   },
 ];
 
-const PROOF = [
-  { figure: '10%', label: 'flat income tax' },
-  { figure: '~100%', label: 'renewable grid' },
-  { figure: '2024 & 2025', label: 'investment grade' },
-  { figure: '~4%', label: 'GDP growth' },
-];
-
 const VENTURES = [
   {
     name: 'Itaju Residency',
@@ -134,109 +127,7 @@ function Home() {
         </div>
       </section>
 
-      {/* 2. Thesis — short, left aligned, generous spacing. */}
-      <section className={'py-16 md:py-20'}>
-        <div className={SHELL}>
-          <h2
-            className={
-              'font-display max-w-3xl text-3xl font-medium tracking-tight md:text-4xl'
-            }
-          >
-            We&apos;re building a base, not placing a bet.
-          </h2>
-          <p
-            className={
-              'text-muted-foreground mt-6 max-w-3xl text-lg leading-relaxed'
-            }
-          >
-            Most people meet Paraguay as a line item, a cheaper tax bill, a
-            second status, a place to park. We see it differently. Paraguay is a
-            small country doing the hard things right: a stable currency, low
-            debt, open to capital, and sitting on an energy surplus most nations
-            would build an entire economy around. The opportunity here is not
-            hidden. It is early, and it is compounding. Itaju Group exists to
-            build inside that growth, to put down real roots across the things
-            that matter when you move your life or your capital somewhere new.
-            Where to live. How to operate. What to build. We start with three.
-          </p>
-        </div>
-      </section>
-
-      {/* 3. Proof band — full width, dark, gold numerals. Visual centerpiece. */}
-      <section className={'bg-neutral-950 py-20 text-white md:py-28'}>
-        <div className={SHELL}>
-          <div className={'grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-4'}>
-            {PROOF.map((stat) => (
-              <div key={stat.label} className={'flex flex-col'}>
-                <span
-                  className={
-                    'text-gold-light font-display text-4xl font-medium tracking-tight md:text-5xl'
-                  }
-                >
-                  {stat.figure}
-                </span>
-                <span className={'mt-3 text-sm text-neutral-300 md:text-base'}>
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Why Paraguay — numbered editorial list, 01–04. */}
-      <section className={'py-20 md:py-28'}>
-        <div className={SHELL}>
-          <h2
-            className={
-              'font-display text-4xl font-medium tracking-tight md:text-5xl'
-            }
-          >
-            Why Paraguay
-          </h2>
-          <p className={'text-muted-foreground mt-4 max-w-2xl text-lg'}>
-            The case is structural, not seasonal. Four reasons serious money is
-            showing up.
-          </p>
-
-          <div className={'mt-14 flex flex-col'}>
-            {WHY_PARAGUAY.map((item, i) => (
-              <div
-                key={item.title}
-                className={
-                  'grid grid-cols-1 gap-3 border-t border-neutral-200 py-8 md:grid-cols-[5rem_1fr] md:gap-10 md:py-10 dark:border-neutral-800'
-                }
-              >
-                <span
-                  className={
-                    'text-gold font-display text-4xl leading-none font-medium tabular-nums md:text-5xl'
-                  }
-                >
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <div className={'max-w-2xl'}>
-                  <h3
-                    className={
-                      'font-display text-2xl font-medium tracking-tight md:text-3xl'
-                    }
-                  >
-                    {item.title}
-                  </h3>
-                  <p
-                    className={
-                      'text-muted-foreground mt-3 text-base leading-relaxed md:text-lg'
-                    }
-                  >
-                    {item.body}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. The ventures — three cards, neutral image placeholder on top. */}
+      {/* 2. The ventures — three cards, neutral image placeholder on top. */}
       <section className={'py-20 md:py-28'}>
         <div className={SHELL}>
           <h2
@@ -307,7 +198,87 @@ function Home() {
         </div>
       </section>
 
-      {/* 6. Closing — one strong statement + styled button. */}
+      {/* 3. Thesis — short, left aligned, generous spacing. */}
+      <section className={'py-16 md:py-20'}>
+        <div className={SHELL}>
+          <h2
+            className={
+              'font-display max-w-3xl text-3xl font-medium tracking-tight md:text-4xl'
+            }
+          >
+            We&apos;re building a base, not placing a bet.
+          </h2>
+          <p
+            className={
+              'text-muted-foreground mt-6 max-w-3xl text-lg leading-relaxed'
+            }
+          >
+            Most people meet Paraguay as a line item, a cheaper tax bill, a
+            second status, a place to park. We see it differently. Paraguay is a
+            small country doing the hard things right: a stable currency, low
+            debt, open to capital, and sitting on an energy surplus most nations
+            would build an entire economy around. The opportunity here is not
+            hidden. It is early, and it is compounding. Itaju Group exists to
+            build inside that growth, to put down real roots across the things
+            that matter when you move your life or your capital somewhere new.
+            Where to live. How to operate. What to build. We start with three.
+          </p>
+        </div>
+      </section>
+
+      {/* 4. Why Paraguay — numbered editorial list, 01–04. */}
+      <section className={'py-20 md:py-28'}>
+        <div className={SHELL}>
+          <h2
+            className={
+              'font-display text-4xl font-medium tracking-tight md:text-5xl'
+            }
+          >
+            Why Paraguay
+          </h2>
+          <p className={'text-muted-foreground mt-4 max-w-2xl text-lg'}>
+            The case is structural, not seasonal. Four reasons serious money is
+            showing up.
+          </p>
+
+          <div className={'mt-14 flex flex-col'}>
+            {WHY_PARAGUAY.map((item, i) => (
+              <div
+                key={item.title}
+                className={
+                  'grid grid-cols-1 gap-3 border-t border-neutral-200 py-8 md:grid-cols-[5rem_1fr] md:gap-10 md:py-10 dark:border-neutral-800'
+                }
+              >
+                <span
+                  className={
+                    'text-gold font-display text-4xl leading-none font-medium tabular-nums md:text-5xl'
+                  }
+                >
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div className={'max-w-2xl'}>
+                  <h3
+                    className={
+                      'font-display text-2xl font-medium tracking-tight md:text-3xl'
+                    }
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    className={
+                      'text-muted-foreground mt-3 text-base leading-relaxed md:text-lg'
+                    }
+                  >
+                    {item.body}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Closing — one strong statement + styled button. */}
       <section className={'py-24 md:py-32'}>
         <div className={SHELL}>
           <h2
