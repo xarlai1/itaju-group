@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Landmark, Plane, TrendingUp, Zap } from 'lucide-react';
+
+import { EcosystemShowcase } from '@kit/ui/marketing';
 
 const RESIDENCY_URL = 'https://itajuresidency.com';
 
@@ -27,18 +29,22 @@ const SHELL = 'mx-auto w-full max-w-6xl px-6 lg:px-10';
 
 const WHY_PARAGUAY = [
   {
+    icon: Landmark,
     title: 'A territorial tax system',
     body: 'Paraguay taxes what you earn inside Paraguay and leaves the rest alone. Corporate and personal income tax sit at a flat 10%. Foreign income is not taxed locally. There is no wealth tax and no inheritance tax. It is one of the simplest, lowest tax regimes in the Americas.',
   },
   {
+    icon: Zap,
     title: 'Clean energy in surplus',
     body: "The Itaipú dam is one of the largest hydroelectric plants in the world, and Paraguay's grid runs almost entirely on renewable hydropower. The country consumes only a fraction of what it generates, which leaves industrial electricity among the cheapest on earth. That surplus is already pulling in data centers and miners building on clean, renewable power.",
   },
   {
+    icon: Plane,
     title: 'A residency you can actually get',
     body: 'Paraguay offers one of the most accessible permanent residency routes in the world. The in person commitment is a single short trip, and you hold your status by visiting once every few years rather than living there full time. For people who value optionality, that is rare.',
   },
   {
+    icon: TrendingUp,
     title: 'An economy crossing into investment grade',
     body: "In 2024, Moody's rated Paraguay investment grade for the first time. S&P followed at the end of 2025. Growth has run near 4%, inflation is low, and public debt is modest. Two of the three major agencies now treat Paraguay as a stable, predictable place to put long term money. Serious capital has noticed.",
   },
@@ -48,7 +54,7 @@ const VENTURES = [
   {
     name: 'Itaju Residency',
     status: 'Live' as const,
-    body: 'Permanent residency in Paraguay, handled end to end. Lawyer led, paperwork done for you, one short trip on your side.',
+    body: 'A second residency in Paraguay, secured end to end, with one short trip required.',
     href: RESIDENCY_URL,
   },
   {
@@ -59,7 +65,7 @@ const VENTURES = [
   {
     name: 'Itaju Energy',
     status: 'Coming Soon' as const,
-    body: "Turning Paraguay's hydro surplus into infrastructure: AI data centers and Bitcoin mining, running on clean, low cost, renewable power.",
+    body: "Turning Paraguay's hydro surplus into infrastructure: AI data centers & Bitcoin mining farms, running on clean, cost efficient renewable energy.",
   },
 ];
 
@@ -163,35 +169,40 @@ function Home() {
         </div>
       </section>
 
-      {/* 3. Thesis — short, left aligned, generous spacing. */}
+      {/* 3. Thesis — EcosystemShowcase two column: heading + paragraph beside a
+          gold pull quote. */}
       <section className={'py-10 md:py-12'}>
         <div className={SHELL}>
-          <h2
-            className={
-              'font-display max-w-3xl text-3xl font-medium tracking-tight md:text-4xl'
+          <EcosystemShowcase
+            heading={
+              <span
+                className={
+                  'font-display text-3xl font-medium tracking-tight md:text-4xl'
+                }
+              >
+                {`We're building a base, not placing a bet.`}
+              </span>
+            }
+            description={
+              'Most people meet Paraguay as a line item, a cheaper tax bill, a second status, a place to park. We see it differently. Paraguay is a small country doing the hard things right: a stable currency, low debt, open to capital, and sitting on an energy surplus most nations would build an entire economy around. The opportunity here is not hidden. It is early, and it is compounding. Itaju Group exists to build inside that growth, to put down real roots across the things that matter when you move your life or your capital somewhere new. Where to live. How to operate. What to build. We start with three.'
             }
           >
-            We&apos;re building a base, not placing a bet.
-          </h2>
-          <p
-            className={
-              'text-muted-foreground mt-6 max-w-3xl text-lg leading-relaxed'
-            }
-          >
-            Most people meet Paraguay as a line item, a cheaper tax bill, a
-            second status, a place to park. We see it differently. Paraguay is a
-            small country doing the hard things right: a stable currency, low
-            debt, open to capital, and sitting on an energy surplus most nations
-            would build an entire economy around. The opportunity here is not
-            hidden. It is early, and it is compounding. Itaju Group exists to
-            build inside that growth, to put down real roots across the things
-            that matter when you move your life or your capital somewhere new.
-            Where to live. How to operate. What to build. We start with three.
-          </p>
+            <blockquote
+              className={'flex w-full items-center lg:border-l lg:pl-12'}
+            >
+              <p
+                className={
+                  'text-gold font-display text-3xl leading-tight font-medium tracking-tight text-balance md:text-4xl lg:text-5xl'
+                }
+              >
+                It is early, and it is compounding.
+              </p>
+            </blockquote>
+          </EcosystemShowcase>
         </div>
       </section>
 
-      {/* 4. Why Paraguay — numbered editorial list, 01–04. */}
+      {/* 4. Why Paraguay — 2x2 icon grid with gold lucide icons. */}
       <section className={'py-10 md:py-12'}>
         <div className={SHELL}>
           <h2
@@ -206,25 +217,25 @@ function Home() {
             showing up.
           </p>
 
-          <div className={'mt-6 flex flex-col'}>
-            {WHY_PARAGUAY.map((item, i) => (
-              <div
-                key={item.title}
-                className={
-                  'grid grid-cols-1 gap-3 border-t border-neutral-200 py-8 md:grid-cols-[5rem_1fr] md:gap-10 md:py-10 dark:border-neutral-800'
-                }
-              >
-                <span
+          <div className={'mt-6 grid gap-6 sm:grid-cols-2'}>
+            {WHY_PARAGUAY.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={item.title}
                   className={
-                    'text-gold font-display text-4xl leading-none font-medium tabular-nums md:text-5xl'
+                    'flex h-full flex-col rounded-lg border border-neutral-200 p-6 md:p-8 dark:border-neutral-800'
                   }
                 >
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <div className={'max-w-2xl'}>
+                  <Icon
+                    className={'text-gold h-7 w-7'}
+                    strokeWidth={1.5}
+                    aria-hidden
+                  />
                   <h3
                     className={
-                      'font-display text-2xl font-medium tracking-tight md:text-3xl'
+                      'font-display mt-4 text-2xl font-medium tracking-tight md:text-3xl'
                     }
                   >
                     {item.title}
@@ -237,8 +248,8 @@ function Home() {
                     {item.body}
                   </p>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

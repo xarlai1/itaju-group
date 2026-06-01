@@ -34,7 +34,7 @@ export const EcosystemShowcase: React.FC<EcosystemShowcaseProps> =
         {...props}
       >
         <div
-          className={cn('flex h-full w-full flex-col gap-y-4 lg:w-1/3', {
+          className={cn('flex h-full w-full flex-col gap-y-4 lg:w-1/2', {
             'items-start text-left': textPosition === 'left',
             'items-start text-left lg:items-end lg:text-right':
               textPosition === 'right',
@@ -55,7 +55,7 @@ export const EcosystemShowcase: React.FC<EcosystemShowcaseProps> =
           {cta && <div className="mt-2">{cta}</div>}
         </div>
 
-        <div className="flex w-full lg:w-2/3">{children}</div>
+        <div className="flex w-full lg:w-1/2">{children}</div>
       </div>
     );
   };

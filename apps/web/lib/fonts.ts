@@ -55,14 +55,11 @@ export function getFontsClassName(theme?: string) {
 
   const font = [sans.variable, heading.variable, display.variable].reduce<
     string[]
-  >(
-    (acc, curr) => {
-      if (acc.includes(curr)) return acc;
+  >((acc, curr) => {
+    if (acc.includes(curr)) return acc;
 
-      return [...acc, curr];
-    },
-    [],
-  );
+    return [...acc, curr];
+  }, []);
 
   return cn(...font, {
     dark,

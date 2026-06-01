@@ -2,12 +2,10 @@
 // The SVGs @import Cormorant Garamond + Inter from Google Fonts, so this needs
 // network access. Run from apps/web:  node scripts/render-branding.mjs
 import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'node:path';
 import { createRequire } from 'node:module';
-const require = createRequire(
-  process.env.PLAYWRIGHT_ENTRY ?? import.meta.url,
-);
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const require = createRequire(process.env.PLAYWRIGHT_ENTRY ?? import.meta.url);
 const { chromium } = require('playwright');
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -15,9 +13,23 @@ const img = (p) => resolve(here, '..', 'public', 'images', p);
 
 const TARGETS = [
   // logo: transparent background, retina-crisp for a small display size.
-  { svg: img('logo.svg'), out: img('logo.png'), w: 600, h: 140, scale: 3, transparent: true },
+  {
+    svg: img('logo.svg'),
+    out: img('logo.png'),
+    w: 600,
+    h: 140,
+    scale: 3,
+    transparent: true,
+  },
   // OG image: opaque, exact 1200x630 to match the declared metadata dimensions.
-  { svg: img('og-image.svg'), out: img('og-image.png'), w: 1200, h: 630, scale: 1, transparent: false },
+  {
+    svg: img('og-image.svg'),
+    out: img('og-image.png'),
+    w: 1200,
+    h: 630,
+    scale: 1,
+    transparent: false,
+  },
 ];
 
 const browser = await chromium.launch();
