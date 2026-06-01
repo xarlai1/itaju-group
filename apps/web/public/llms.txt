@@ -1,45 +1,28 @@
-# Itaju Residency
+# Itaju Group
 
-> Paraguayan temporary residency for global citizens, convertible to permanent after 2 years. One flat fee, lawyer led, locally handled. Asunción, Paraguay.
+> Itaju Group builds and operates ventures in Paraguay: permanent residency,
+> investment, and clean energy infrastructure. One country, three doors.
 
-Itaju Residency helps international clients obtain Paraguayan temporary residency, which can be converted to permanent residency after 2 years. Service is lawyer led, registered as Itaju Group E.A.S. in Asunción, Paraguay. One flat fee, one 14 day trip, all paperwork handled by the team and partner law firm.
+Itaju Group is a holding company building inside one of the fastest growing
+economies in South America. Paraguay offers a territorial tax system, a flat
+10% corporate and personal income tax, no tax on foreign income, no wealth or
+inheritance tax, an electricity grid running almost entirely on renewable
+hydropower with a large surplus, and an economy that crossed into investment
+grade with Moody's in 2024 and S&P in 2025.
 
-## Service
+## Ventures
 
-- One flat fee: USD 2,500
-- Temporary residency, convertible to permanent after 2 years
-- One 14 day trip to Paraguay required
-- All paperwork managed end to end
-- English and Spanish language support
-
-## What is included
-
-- Paraguayan ID (Cédula)
-- Tax Registration (RUC, if required)
-- Police Clearance
-- Lawyer Representation (Legal Requirement)
-- Paperwork Handled
-- Path to Permanent Residency after 2 years
-- Single trip, fully handled
+- [Itaju Residency](https://itajuresidency.com): Permanent residency in
+  Paraguay, secured end to end, with one short trip required. Status: live.
+- Itaju Capital: Investment into Paraguay. We research opportunities, handle
+  acquisition, and manage holdings on behalf of investors. Status: coming soon.
+- Itaju Energy: Turning Paraguay's hydro surplus into infrastructure for AI
+  data centers and Bitcoin mining on clean, cost efficient renewable energy.
+  Status: coming soon.
 
 ## Pages
 
-- [Home](https://itajuresidency.com): service overview
-- [Pricing](https://itajuresidency.com/pricing): flat fee structure and what is included
-- [FAQ](https://itajuresidency.com/faq): common questions about Paraguayan residency
-- [Blog](https://itajuresidency.com/blog): insights on residency, relocation, and life in Asunción
-  - [Why Paraguay in 2026? The Honest Tax Residency Case](https://itajuresidency.com/blog/why-paraguay-2026-tax-residency)
-  - [Paraguay Residency Documents 2026: The 7 Rejection Triggers](https://itajuresidency.com/blog/paraguay-residency-documents-2026)
-  - [Does Paraguay Residency Make You a Tax Resident?](https://itajuresidency.com/blog/paraguay-residency-vs-tax-residency)
-  - [Paraguay vs Panama, Uruguay, Portugal and the UAE: The 2026 Residency and Tax Comparison](https://itajuresidency.com/blog/paraguay-vs-panama-uruguay-portugal-uae)
-- [Contact](https://itajuresidency.com/contact): WhatsApp and other contact methods
-- [Privacy Policy](https://itajuresidency.com/privacy-policy)
-- [Terms of Service](https://itajuresidency.com/terms-of-service)
-
-## Company
-
-- Brand: Itaju Residency
-- Parent: Itaju Group E.A.S.
-- Location: Asunción, Paraguay
-- Country: Paraguay (PY)
-- Languages: English, Spanish
+- [Home](https://itajugroup.com): Overview of Itaju Group and its ventures.
+- [Privacy Policy](https://itajugroup.com/privacy-policy)
+- [Terms of Service](https://itajugroup.com/terms-of-service)
+- [Cookie Policy](https://itajugroup.com/cookie-policy)
