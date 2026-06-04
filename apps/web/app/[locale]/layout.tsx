@@ -23,11 +23,11 @@ import { getRootTheme } from '~/lib/root-theme';
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': 'https://itajugroup.com/#organization',
+  '@id': 'https://www.itajugroup.com/#organization',
   name: 'Itaju Group',
-  url: 'https://itajugroup.com',
-  logo: 'https://itajugroup.com/images/logo.png',
-  image: 'https://itajugroup.com/images/og-image.png',
+  url: 'https://www.itajugroup.com',
+  logo: 'https://www.itajugroup.com/images/logo.png',
+  image: 'https://www.itajugroup.com/images/og-image.png',
   description:
     'Itaju Group builds ventures in Paraguay: permanent residency, investment, and clean energy infrastructure. One country, three doors.',
   address: {

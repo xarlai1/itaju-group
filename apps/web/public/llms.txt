@@ -22,7 +22,7 @@ grade with Moody's in 2024 and S&P in 2025.
 
 ## Pages
 
-- [Home](https://itajugroup.com): Overview of Itaju Group and its ventures.
-- [Privacy Policy](https://itajugroup.com/privacy-policy)
-- [Terms of Service](https://itajugroup.com/terms-of-service)
-- [Cookie Policy](https://itajugroup.com/cookie-policy)
+- [Home](https://www.itajugroup.com): Overview of Itaju Group and its ventures.
+- [Privacy Policy](https://www.itajugroup.com/privacy-policy)
+- [Terms of Service](https://www.itajugroup.com/terms-of-service)
+- [Cookie Policy](https://www.itajugroup.com/cookie-policy)

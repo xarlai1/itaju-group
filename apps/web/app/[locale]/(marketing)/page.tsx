@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   // Self-referencing canonical. Resolved against metadataBase
-  // (https://itajugroup.com).
+  // (https://www.itajugroup.com).
   alternates: { canonical: '/' },
   openGraph: { title: TITLE, description: DESCRIPTION },
   twitter: { title: TITLE, description: DESCRIPTION },

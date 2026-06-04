@@ -16,7 +16,7 @@
  */
 
 const INDEXNOW_KEY = '3694a508ab81224d13d22c19d055a03d';
-const HOST = 'itajuresidency.com';
+const HOST = 'www.itajugroup.com';
 const SITEMAP_URL = `https://${HOST}/sitemap.xml`;
 const KEY_LOCATION = `https://${HOST}/${INDEXNOW_KEY}.txt`;
 const ENDPOINT = 'https://api.indexnow.org/indexnow';
