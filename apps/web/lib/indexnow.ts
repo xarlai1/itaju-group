@@ -1,5 +1,5 @@
 /**
- * IndexNow key for itajuresidency.com.
+ * IndexNow key for itajugroup.com.
  *
  * This is NOT a secret — it is published at `/<key>.txt` so search engines can
  * verify ownership. It is hardcoded (not an env var) on purpose, to avoid the
